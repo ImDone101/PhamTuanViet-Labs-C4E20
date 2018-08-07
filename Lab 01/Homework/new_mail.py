@@ -17,11 +17,11 @@ now = str(datetime.now())[11:]
 limit = now[:5]
 
 condi = True
-while limit > '7:00' and condi:
+while limit > '07:00' and condi:
     reason_random = choice(reason)
     html_new = html_content.replace("{{sickness}}", reason_random )
 
     gmail = GMail('vietc4e20@gmail.com', 'Viet5564833')
     msg = Message('Text Message',to='20130075@student.hust.edu.vn',html=html_new)
     gmail.send(msg)
-    break
+    condi = False
