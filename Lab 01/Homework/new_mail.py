@@ -17,7 +17,7 @@ now = str(datetime.now())[11:]
 limit = now[:5]
 
 condi = True
-while limit > '07:00' and condi:
+while '07:00' < limit < '09:00' and condi:
     reason_random = choice(reason)
     html_new = html_content.replace("{{sickness}}", reason_random )
 
